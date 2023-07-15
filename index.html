@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The universe</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<link rel="stylesheet" type="text/css" href="Styles/big002/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="Styles/big002/css/big002.css"/>
+<link rel="stylesheet" type="text/css" href="Styles/big002/css/hideshow.css"/>
+<script type="text/javascript" src="Styles/big002/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="Styles/big002/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="Styles/big002/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="Styles/big002/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="Styles/big002/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="Styles/big002/js/big002.js"></script>
+<script type="text/javascript" src="Styles/big002/js/hideshow.js"></script>
+<script type="text/javascript" src="Styles/lib/js/jquery.stickytableheaders.min.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">The universe</h1>
+<div id="outline-container-org885c1e4" class="outline-2">
+<h2 id="org885c1e4">Introduction</h2>
+<div class="outline-text-2" id="text-org885c1e4">
+<p>
+What is this?
+</p>
+
+<p>
+This is the outline for an article using the Top-Down approach in writing.
+</p>
+
+<p>
+What is the Top-Down approach?
+</p>
+
+<p>
+In a Top-Down approach for writing, the writer makes an outline first.
+</p>
+
+<p>
+That's it?
+</p>
+
+<p>
+Yes, that's it.
+</p>
+
+<p>
+Okay
+</p>
+
+<p>
+Please see the other tabs for more information about the universe.
+</p>
+</div>
+</div>
+<div id="outline-container-org11c8283" class="outline-2">
+<h2 id="org11c8283">The origin of the Universe</h2>
+<div class="outline-text-2" id="text-org11c8283">
+</div>
+<div id="outline-container-orgd5ca104" class="outline-3">
+<h3 id="orgd5ca104"><a href="https://www.scielo.br/j/ea/a/L4Cn5NyczfTBhdxTDsr4Kng/?format=pdf&amp;lang=en#:~:text=The%20flat%20Earth%2C%20the%20geocentric,to%20say%20they%20were%20incomplete.">Origin of the universe (article)</a></h3>
+</div>
+</div>
+<div id="outline-container-org344aa54" class="outline-2">
+<h2 id="org344aa54">Standard cosmological model</h2>
+<div class="outline-text-2" id="text-org344aa54">
+</div>
+<div id="outline-container-orgeab09a8" class="outline-3">
+<h3 id="orgeab09a8"><a href="https://iopscience.iop.org/article/10.1088/1742-6596/120/2/022001/pdf">Standard Cosmological model (article)</a></h3>
+</div>
+<div id="outline-container-org512a6ce" class="outline-3">
+<h3 id="org512a6ce"></h3>
+</div>
+</div>
+<div id="outline-container-orgf750976" class="outline-2">
+<h2 id="orgf750976">The existential problem</h2>
+<div class="outline-text-2" id="text-orgf750976">
+<p>
+Some may feel small because the Earth as a planet looks much bigger than a single person. But the Earth as a planet looks small compared to the Sun. The Sun as a star looks small compared to the solar system. The solar system looks small compared to the galaxy. The galaxy looks small compared to the galaxy cluster. The galaxy cluster looks small compared to the other bigger galaxy clusters. No matter how big a galaxy cluster is, it looks small compared to the&#x2026; finally&#x2026;the universe.
+</p>
+
+<p>
+(Check this <a href="https://blogs.scientificamerican.com/life-unbounded/having-an-existential-crisis-it-could-be-worse-and-weirder/">article on scientific American</a>.)
+</p>
+
+<p>
+Then how does a single person compare to the universe?
+</p>
+
+<p>
+It's hard to say. A person is small in space and time compared to the universe. But a person can perceive the universe. The volume of the mind doesn't seem to have limit.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgae05861" class="outline-2">
+<h2 id="orgae05861">The CMB (Cosmic Microwave Background)</h2>
+<div class="outline-text-2" id="text-orgae05861">
+</div>
+<div id="outline-container-org9c80ad5" class="outline-3">
+<h3 id="org9c80ad5">What is the CMB?</h3>
+<div class="outline-text-3" id="text-org9c80ad5">
+<p>
+The CMB is a background signal in space. The discovery of the CMB is a fun story. 
+</p>
+</div>
+</div>
+<div id="outline-container-org52194a2" class="outline-3">
+<h3 id="org52194a2">How is CMB measured?</h3>
+<div class="outline-text-3" id="text-org52194a2">
+<p>
+The CMB is measured with bolometers sent in space. The bolometers measure the temperature fluctuations.
+</p>
+
+<p>
+Questions: How does Spider work?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org84a49fa" class="outline-3">
+<h3 id="org84a49fa">What are the key features of the CMB?</h3>
+<div class="outline-text-3" id="text-org84a49fa">
+<p>
+The CMB is isotropic and homogeneous. Isotropic means that it's uniform across all directions. Homogeneous means pretty much the same thing. 
+</p>
+</div>
+</div>
+<div id="outline-container-org4301ef5" class="outline-3">
+<h3 id="org4301ef5">If it's infinite, it shouldn't be in equilibrium</h3>
+<div class="outline-text-3" id="text-org4301ef5">
+<p>
+The size of the universe appears to be infinite. 
+</p>
+</div>
+</div>
+<div id="outline-container-orgee1670e" class="outline-3">
+<h3 id="orgee1670e">If it is in equilibrium, then it shouldn't be infinite</h3>
+</div>
+</div>
+<div id="outline-container-orga9941ff" class="outline-2">
+<h2 id="orga9941ff">Math and the universe</h2>
+<div class="outline-text-2" id="text-orga9941ff">
+<p>
+Gödel's theorem said math is not going to be complete
+</p>
+
+<p>
+There are statements in math that you can either prove or disprove
+</p>
+
+<p>
+If the universe is logically complete
+</p>
+
+<p>
+Math is not ever going to describe the universe fully
+</p>
+
+<p>
+In that sense, math could be a science
+</p>
+
+<p>
+It's better to have a logical universe than a mathematical universe
+</p>
+
+<p>
+It's beyond science to deduce the truths of the universe. Science is to provide description of predictions in a certain scope.
+</p>
+
+<p>
+I would like to think that math is true and reflects in some way how the universe works.
+</p>
+
+<p>
+But mathematics is logically in complete.
+</p>
+
+<p>
+So either the universe is mathematical but not logical or universe is logical but not mathematical
+</p>
+</div>
+</div>
+<div id="outline-container-org51a5f76" class="outline-2">
+<h2 id="org51a5f76">GPT</h2>
+</div>
+<div id="outline-container-org83a373d" class="outline-2">
+<h2 id="org83a373d">Initial draft of the article</h2>
+<div class="outline-text-2" id="text-org83a373d">
+<p>
+Title: The Universe
+</p>
+
+<p>
+The Universe is the place we live in. What do we know about the Universe?
+</p>
+
+<p>
+Scratch that. I need to write following the outline I had.
+</p>
+
+<p>
+What is this essay for? This essay for a practice using the Top-Down approach for doing writing. What is the Top-Down approach? The Top-Down approach is to make an outline and then fill in the content.
+</p>
+
+<p>
+What is the topic in this practice essay? This essay is about the Universe. How much do we know about the Universe? Hard to say. (Shall we follow the outline? Where is the outline? The outline is in this web page. Looks good. What's next on the outline?)
+</p>
+
+<p>
+What is the origin of the universe? For the origin of the universe, check the article in this link, <a href="https://www.scielo.br/j/ea/a/L4Cn5NyczfTBhdxTDsr4Kng/?format=pdf&amp;lang=en#:~:text=The%20flat%20Earth%2C%20the%20geocentric,to%20say%20they%20were%20incomplete.">origin of the universe</a>.
+</p>
+
+<p>
+What's the next item on the outline? The next item is the Standard Cosmological Model. It's citing another material on line in this link, <a href="https://iopscience.iop.org/article/10.1088/1742-6596/120/2/022001/pdf">cosmological model</a>.
+</p>
+
+<p>
+What's next? The next one is the existential problem. Sometimes people feel small because the Universe is supposed to be very big.
+</p>
+
+<p>
+The next section is about the CMB.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc437e0f" class="outline-2">
+<h2 id="orgc437e0f">Draft 2</h2>
+<div class="outline-text-2" id="text-orgc437e0f">
+<p>
+Broader than the continent is the ocean. Broader than the ocean is the sky. Broader than the sky is the Universe. Broader than the Universe is the breadth of an open mind.
+</p>
+
+<p>
+The level of difficulty in understanding something is related to the width of content it. Understanding the Universe is very challenging because the Universe is so broad. The only other task as challenging as understanding the Universe is to understand the mind, with the mind. It does not mean the land and the ocean are all understood. It does not even mean the land and the ocean are easier to understand.
+</p>
+
+<p>
+What we're trying to talk here is about how to study the Universe using the scientific approach. It sounds weird to talk about the evolution of the Universe. How do we even know? What are the key observations that support the theories? What are the key theories that support the framework?
+</p>
+
+<p>
+To begin the story we start from relativity. Relativity is not a weird theory. Relativity is inspired by observation from the Michelson-Morley experiment.
+</p>
+
+<p>
+What was the initial goal for the Michelson-Morley experiment? The Michelson-Morley experiment was designed to find aether, the medium that light is supposed to travel through. In what sense? light has wave properties. For other waves the wave feaure is from the oscillation of a medium. Why should light be an exception?
+</p>
+
+<p>
+The theory of electromagnetism is summarized from observations in electromagnetic phenomena. From the Michelson-Morley experiment and other experiments, the speed of light is the same in reference frames at different velocities. Under the constraint of speed of light staying constant in reference frames at different velocities, space and time would be required to be correlated instead of independent.
+</p>
+
+<p>
+If space and time are correlated instead of independent, it became possible to model the effect of gravity through correlating the space and time. 
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
